@@ -1,0 +1,313 @@
+@charset "UTF-8";
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+dl, dt, dd, ul, ol, li,
+pre,
+form, fieldset, legend, button, input, textarea,
+th, td {
+  margin: 0;
+  padding: 0; }
+
+/** 设置默认字体 **/
+body, button, input, select, textarea {
+  font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+  font-family: Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%; }
+
+address, cite, dfn, em, var {
+  font-style: normal; }
+
+/* 将斜体扶正 */
+code, kbd, pre, samp {
+  font-family: courier new, courier, monospace; }
+
+/* 统一等宽字体 */
+small {
+  font-size: 12px; }
+
+/* 小于 12px 的中文很难阅读，让 small 正常化 */
+/** 重置列表元素 **/
+ul, ol {
+  list-style: none; }
+
+/** 重置文本格式元素 **/
+a {
+  text-decoration: none;
+  color: #000000; }
+
+a:hover {
+  text-decoration: derline; }
+
+/** 重置表单元素 **/
+legend {
+  color: #000; }
+
+/* for ie6 */
+fieldset, img {
+  border: 0; }
+
+/* img 搭车：让链接里的 img 无边框 */
+button, input, select, textarea {
+  font-size: 100%; }
+
+/* 使得表单元素在 ie 下能继承字体大小 */
+/* 注：optgroup 无法扶正 */
+/** 重置表格元素 **/
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  overflow-x: hidden;
+  font-size: 16px;
+    background-color: #b639a3;
+}
+.main{
+    margin: 0 auto;
+    width: 640px;
+}
+.fist{
+    width: 100%;
+    height: 341px;
+}
+.fist img{
+    width: 640px;
+    height: 341px;
+}
+.title{
+    height: 80px;
+    /* float: left; */
+    
+}
+.title_box{
+    position: relative;
+    display: block;
+    width: 151px;
+    height: 80px;
+    margin: 0 auto;
+    text-align: center;
+}
+.before{
+    position: absolute;
+    background-color: #fff7fb;
+    left: -98px;
+}
+.after{
+    position: absolute;
+    background-color: #fff7fb;
+    right: -98px;
+}
+.line{
+    position: absolute;
+    height: 1px;
+    width: 90px;
+    background: #fff7fb;
+    /* color: #fff7fb; */
+    top: 40px;
+}
+.ng_binding{
+    font-size: 28px;    
+    color: #fff7fb;
+    line-height: 80px;
+}
+.go_see_nav{
+    width: 100%;
+    margin-top: -6px;
+    position: relative;
+}
+.go_see_nav img{
+    width: 640px;
+    /* height: 164px; */
+}
+.left_box{
+    width: 287px;
+    height: 134px;
+    position: absolute;
+    left: 29px;
+    top: 1px;
+}
+.left_box_one{
+    top: 23px;
+}
+.left_box_two{
+    top:-5px;
+}
+.right_box{
+    width: 287px;
+    height: 134px;
+    position: absolute;
+    left: 325px;
+    top: 1px;
+}
+.right_box_one{
+    top: 23px;
+}
+.right_box_two{
+    top:-5px;
+}
+.gogo{
+    width: 640px;
+    float: left;
+    padding-bottom: 10px;
+}
+.rag{
+    width: 604px;
+    margin: 0 auto;
+}
+.meet_item_box{
+    padding: 18px;
+    width: 262px;
+    height: 74px;
+    float: left;
+    border-radius: 10px;
+}
+.meet_box_one{
+    background-color: #f9f4e1;
+}
+.meet_box_two{
+    margin-left: 8px;
+    background-color: #e3ecf3;
+}
+.meet_item_box_left{
+    width: 147px;
+    height: 74px;
+    float: left;
+}
+.meet_item_box_right{
+    width: 115px;
+    height: 74px;
+    float: left;
+}
+.title_one{
+    line-height: 23px;
+    font-size: 18px;
+}
+.title_two{
+    line-height: 23px;
+    color: #e06b47;
+}
+.go_span{
+    display: block;
+    width: 59px;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 20px;
+   background: #ecd99d;
+   text-align: center;
+}
+.meet_item_box_right img{
+    margin: 0 21px;
+    width: 75px;
+}
+.conference{
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    padding-top: 14px;
+    font-size: 18px;
+}
+.meet_item_nav{
+    width: 195px;
+    height: 195px;
+    border-radius: 10px;
+    float: left;
+    margin-left: 8px;
+}
+.meet_summery{
+    display: block;
+    width: 128px;
+    height: 24px;
+    line-break: 24px;
+    margin: 0 auto;
+    margin-top: 8px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #ee6743;
+    color: #fff;
+}
+.good_img_box{
+    width: 104px;
+    margin: 0 auto;
+}
+.good_img{
+    width: 104px;
+    margin: 10px 0;
+}
+.box1{
+    background: #ebe6f3;
+    margin-left: 0;
+}
+.box2{
+    background-color: #ecf3e2;
+}
+.box3{
+    background-color: #f7e1df;
+}
+.nav_title{
+    width: 640px;
+    margin: 0 auto;
+    clear: both;
+}
+.title_rec .ng_binding{
+    font-size: 24px;
+} 
+.last_gg{
+    padding-bottom: 65px;
+}
+.footer{
+    width: 600px;
+    padding:0 20px 0 18px;
+    height: 55px;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+.foot_icon{
+    width: 65px;
+    height: 50px;    
+    
+    margin-top: 5px;
+    float: left;
+}
+.foot_icon img{
+    display: block;
+    width: 31px;
+    height: 31px;
+    margin: 0 auto;
+}
+.foot_text{
+    height: 18px;
+    line-height: 17px;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+}
+.return{
+    position: fixed;
+    bottom:70px;
+    right: 349px;
+
+}
+.return a{
+    display: block;
+    width: 41px;
+    height: 41px;
+}
+.return a img{
+    display: block;
+    width: 41px;
+    height: 41px;
+}
+.s_program{
+    position: fixed;
+    top:0px;
+    left: 1080px;
+}
+.s_program img{
+    width: 140px;
+    height: 160px;
+}
