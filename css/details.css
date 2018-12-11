@@ -1,0 +1,180 @@
+@charset "UTF-8";
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+dl, dt, dd, ul, ol, li,
+pre,
+form, fieldset, legend, button, input, textarea,
+th, td {
+  margin: 0;
+  padding: 0; }
+
+/** 设置默认字体 **/
+body, button, input, select, textarea {
+  font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+  font-family: Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%; }
+
+address, cite, dfn, em, var {
+  font-style: normal; }
+
+/* 将斜体扶正 */
+code, kbd, pre, samp {
+  font-family: courier new, courier, monospace; }
+
+/* 统一等宽字体 */
+small {
+  font-size: 12px; }
+
+/* 小于 12px 的中文很难阅读，让 small 正常化 */
+/** 重置列表元素 **/
+ul, ol {
+  list-style: none; }
+
+/** 重置文本格式元素 **/
+a {
+  text-decoration: none;
+  color: #000000; }
+
+a:hover {
+  text-decoration: derline; }
+
+/** 重置表单元素 **/
+legend {
+  color: #000; }
+
+/* for ie6 */
+fieldset, img {
+  border: 0; }
+
+/* img 搭车：让链接里的 img 无边框 */
+button, input, select, textarea {
+  font-size: 100%; }
+
+/* 使得表单元素在 ie 下能继承字体大小 */
+/* 注：optgroup 无法扶正 */
+/** 重置表格元素 **/
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  overflow-x: hidden; }
+
+[id] {
+  margin: 0 auto;
+  width: 1080px; }
+
+#goods_details{
+    height: 587px;
+    padding-top: 60px;
+    border-top: 1px solid #e7e7e7;
+}
+.good_nav{
+    width: 100%;
+}
+.good_nav_item{
+    float: left;
+    width: 465px;
+    height: 433px;
+    margin-right: 46px;
+}
+.good_nav_item_big{
+    width: 368px;
+    height: 433px;
+    /* margin-right: 16px; */
+    float: left;
+    position: relative;
+}
+.good_nav_item_list{
+    width: 85px;
+    height: 433px;
+    float: right;
+}
+.good_nav_item_li{
+    width: 83px;
+    height: 98px;
+    margin-bottom: 11px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #f4f4f4;
+}
+.good_nav_item_li img{
+    width: 100%;
+}
+.goods_imgs{
+    width: 100%;
+}
+#mo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    }
+#xkuang{
+    width: 106px;
+    height: 106px;
+    box-shadow: 0 0 5px #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 10;
+}
+.big_img{
+    width: 465px;
+    height: 433px;
+    float: left;
+    /* margin-left: 100px; */
+    position: relative;
+    box-shadow: 0 0 5px #000;
+    overflow: hidden;
+    display: none;
+}
+.big_img img{
+    width: 1860px;
+    height: 1732px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.goods_item_text{
+    float: left;
+    width: 561px;
+    /* height: 100%; */
+}
+.name{
+    margin-bottom: 4px;
+    height: 100%;
+}
+.good_name{
+    vertical-align: middle;
+    line-height: 26px;
+    box-sizing: content-box;
+    font-size: 20px;
+    color: #333;
+}
+.good_tag{
+    margin-top: 3px;
+    box-sizing: content-box;
+    margin-left: 5px;
+    padding: 2px 5px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #fff;
+    background-color: #c00000;
+    border-radius: 2px;
+}
+.ff{
+    float: left;
+    /* display: inline-block; */
+    overflow: unset;
+}
+.summary{
+    width: 84%;
+    line-height: 18px;
+    font-size: 12px;
+    color: #999;
+}

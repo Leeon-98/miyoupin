@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>详情</title>
+    <link rel="stylesheet" href="./css/mi.css">
+    <link rel="stylesheet" href="./css/details.css">
+
+</head>
+<body>
+    <!-- head  -->
+    <div id="m_header">
+        <div class="header_top">
+            <div class="fr">
+                <div class="fl_use">
+                    <a href="#">登录</a>
+                    <a href="#">注册</a>
+                </div>
+                <span class="m_line"></span>
+                <div class="fl_help">
+                    <a href="#">帮助中心</a>
+                </div>
+                <span class="m_line"></span>
+                <div class="fl_down">
+                    <a href="#">
+                        <span>
+                        </span>
+                        下载 APP
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- head  end -->
+    <!-- logo -->
+    <div id="container">
+        <div class="m_logo">
+
+        </div>
+        <div class="nav_part">
+
+        </div>
+        <div class="tab_list">
+            <a href="#">
+                <div class="tab_item">预售来袭</div>
+            </a>
+            <a href="#">
+                <div class="tab_item">星品驾到</div>
+            </a>
+            <a href="#">
+                <div class="tab_item">限时抢购</div>
+            </a>
+            <a href="#">
+                <div class="tab_item">全屋智能</div>
+            </a>
+        </div>
+        <div class="m_car">
+            <a href="#"></a>
+        </div>
+        <div class="m_search">
+            <div class="search_from">
+                <span class="m_icon">
+                </span>
+                <div class="m_input">
+                    <input type="text" value placeholder="预售来袭 单品最高省1200">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 商品图 -->
+    <div id="goods_details">
+        <div class="good_nav">
+            <div class="good_nav_item">
+                <div class="good_nav_item_big" id="small">
+                    <img id="goods_imgs" class="goods_imgs"  src="https://shop.io.mi-img.com/app/shop/img?id=shop_d0081f802ada29163bb03bd7add6c493.jpeg&w=366&h=431&t=webp"/>
+                    <div id="mo"></div>
+                    <div id="xkuang"></div>
+                </div>
+                <div class="good_nav_item_list">
+                    <div class="good_nav_item_li" id="good1" >
+                        <img src="https://shop.io.mi-img.com/app/shop/img?id=shop_d0081f802ada29163bb03bd7add6c493.jpeg&w=166&h=196&t=webp"/>
+                    </div>
+                    <div class="good_nav_item_li" id="good2" >
+                        <img src="https://shop.io.mi-img.com/app/shop/img?id=shop_e6647f22bc1f746549fa9391193cd982.jpeg&w=166&h=196&t=webp"/>
+                    </div>
+                    <div class="good_nav_item_li" id="good3" >
+                        <img src="https://shop.io.mi-img.com/app/shop/img?id=shop_8786d175bbaf7770351de74c0dc526b5.jpeg&w=366&h=431&t=webp"/>
+                    </div>
+                    <div class="good_nav_item_li" id="good4" >
+                        <img src="https://shop.io.mi-img.com/app/shop/img?id=shop_a01d50aa16823bf6c82d1cf0c7e6549c.jpeg&w=366&h=431&t=webp"/>
+                    </div>
+                </div>
+            </div>
+            <div class="big_img" id="big">
+                <img id="big_img" src="https://shop.io.mi-img.com/app/shop/img?id=shop_d0081f802ada29163bb03bd7add6c493.jpeg&w=366&h=431&t=webp"/>
+            </div>
+            <div class="goods_item_text">
+                <div class="name">
+                    <div class="good_name ff">
+                        小米8
+                    </div>
+                    <div class="good_tag ff">
+                            限时购
+                    </div>
+                </div>
+                <div class="summary">
+                        双频GPS / 骁龙845处理器 / 红外人脸解锁 / AI变焦双摄 / 三星 AMOLED 屏 / AI语音助手 / 多功能NFC
+                </div>
+            </div>  
+        </div>
+    </div>
+    <!-- 商品信息 -->
+    
+
+</body>
+<script>
+			var osmall = document.getElementById("small");
+			var obig = document.getElementById("big");
+			var oxkuang = document.getElementById("xkuang");
+			var obig_img = obig.children[0];
+			osmall.onmouseover = function(){
+				obig.style.display = "block";
+				oxkuang.style.display = "block";
+			}
+			osmall.onmouseout = function(){//小图的鼠标移动事件移出时隐藏
+				obig.style.display = "none";
+				oxkuang.style.display = "none";
+			}
+			osmall.onmousemove = function(event){//小图的鼠标移动事件
+				var e = event || window.event;
+				var  oleft = e.offsetX -50;//让鼠标位于移动框打的中心
+				var  otop = e.offsetY - 50;//让鼠标位于移动框打的中心
+				//边界检测（小于0 的让他等于0）
+				if(oleft <= 0){
+					oleft = 0;
+				}
+				if(otop <=0 ){
+					otop = 0;
+				}
+				//最大边界检测（最大的为小图大小减去移动框的宽高）
+				var maxleft = osmall.offsetWidth - oxkuang.offsetWidth;
+				var maxtop = osmall.offsetHeight - oxkuang.offsetHeight;
+				if(oleft >= maxleft ){
+					oleft =  maxleft;
+				}
+				if(otop >= maxtop ){
+					otop = maxtop;
+				}
+				//移动框的左右距离
+				oxkuang.style.left = oleft + "px";
+				oxkuang.style.top = otop + "px";
+				//比例计算（多少倍）
+				var beiX = obig.offsetWidth/oxkuang.offsetWidth;
+				var beiY = obig.offsetHeight/oxkuang.offsetHeight;
+				obig_img.style.left = -oleft*beiX + "px";
+				obig_img.style.top = -otop*beiY + "px";
+				
+			}
+			
+</script>
+<script>
+    var small = document.getElementById("father");
+    var a_bigimg = document.getElementById("goods_imgs");
+    var b_bigimg = document.getElementById("big_img");
+    function changimg(father,aimg,bimg){
+        father.onclick = function(){
+            a_bigimg.src = aimg;
+            b_bigimg.src = bimg;
+        }
+    }
+    changimg(good1,
+    "https://shop.io.mi-img.com/app/shop/img?id=shop_d0081f802ada29163bb03bd7add6c493.jpeg&w=366&h=431&t=webp",
+    
+    "https://shop.io.mi-img.com/app/shop/img?id=shop_d0081f802ada29163bb03bd7add6c493.jpeg&w=366&h=431&t=webp");
+    
+    changimg( good2,
+    "https://shop.io.mi-img.com/app/shop/img?id=shop_e6647f22bc1f746549fa9391193cd982.jpeg&w=166&h=196&t=webp",
+    
+    "https://shop.io.mi-img.com/app/shop/img?id=shop_e6647f22bc1f746549fa9391193cd982.jpeg&w=166&h=196&t=webp");
+    changimg(good3,"https://shop.io.mi-img.com/app/shop/img?id=shop_8786d175bbaf7770351de74c0dc526b5.jpeg&w=366&h=431&t=webp",
+    "https://shop.io.mi-img.com/app/shop/img?id=shop_8786d175bbaf7770351de74c0dc526b5.jpeg&w=366&h=431&t=webp");
+    changimg(good4,"https://shop.io.mi-img.com/app/shop/img?id=shop_a01d50aa16823bf6c82d1cf0c7e6549c.jpeg&w=366&h=431&t=webp",
+    "https://shop.io.mi-img.com/app/shop/img?id=shop_a01d50aa16823bf6c82d1cf0c7e6549c.jpeg&w=366&h=431&t=webp");
+</script>
+</html>
