@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+<body>
+        <div id="wrap">
+                <div class="layout_panel">
+                    <div class="layout">
+                        <div class="lgnheader">
+                            <div class="lgnheader_logo">
+                                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1544457241545&di=722bc8b960fe3a3f98fa27aaa97fff50&imgtype=0&src=http%3A%2F%2Fimg.wdjimg.com%2Fmms%2Ficon%2Fv1%2Fc%2Fcb%2F6695e8ff32d038aabf7ca9ac317cacbc_512_512.png" alt="">
+                            </div>
+                            <h4 class="header_tit_txt">注册小米账号</h4>
+                        </div>
+                        <div class="phoneId">
+                            <h4 class="phone_num">手机号码</h4>
+                            <div class="list_wrap_inside">
+                                <div class="list_warp_box">
+                                    <div class="CN">
+                                        +86
+                                    </div>
+                                    <div class="num_input">
+                                        <input type="text" id="user" placeholder="请输入手机号码">
+                                    </div>
+                                   
+                            </div>
+                            <em >请输入手机号码</em>
+                        </div>
+                        
+                        <div class="mima">
+                            <h4 class="phone_num">密码</h4>
+                            <input type="text" name="mima" id="pwd" value="" placeholder="6-16位密码，区分大小写"/>
+                        </div>
+                        <em>建议使用字母数字和符号两种及以上的组合，6-16个字符</em>
+                        <div class="agin_mima">
+                            <h4 class="phone_num">再次输入密码</h4>
+                            <input type="text" name="amima" id="rpwd" value="" placeholder="再次输入密码"/>
+                        </div>
+                        <em>请再次输入密码</em>
+
+                        <div class="reg_btn">
+                            <input id="zc_bt" type="submit" value="立即注册">
+                        </div>
+                        <em class="last" id="btn">注册成功</em>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+</body>
+<script src="./js/ajax.js"></script>
+<script>
+    var oUser = document.getElementById('user');
+	var oPwd = document.getElementById('pwd');
+	var oRpwd = document.getElementById('rpwd');
+	var oEm = document.getElementsByTagName('em')[0];
+	var oEm1 = document.getElementsByTagName('em')[1];
+	var oEm2 = document.getElementsByTagName('em')[2];
+	var oBtn = document.getElementById('zc_bt');
+	var oEm3 = document.getElementsByTagName('em')[3];
+    function DianJi(m, n) {
+		m.onclick = function () {
+			n.style.opacity = '1';
+		}
+    }
+    DianJi(oUser, oEm)
+	DianJi(oPwd, oEm1)
+	DianJi(oRpwd, oEm2)
+    oUser.onblur = function () {
+		var sUser = oUser.value;
+		var reg = /^[1][3,4,5,7,8][0-9]{9}$/;
+		if (reg.test(sUser)) {
+			oEm.style.color = '#fff';
+//			var regNum = /^\d+$/;
+//			if (regNum.test(sUser)) {
+//				oEm.innerHTML = '邮箱不符合';
+//				oEm.style.color = 'red';
+//				return 0;
+//			}
+		} else {
+			oEm.className = 'show toRed';
+			oEm.innerHTML = '格式错误，请重新输入'
+		}
+    }
+    oPwd.onblur = function () {
+
+		var sPwd = oPwd.value;
+		var reg = /^[a-zA-Z0-9\~\!\@\#\$\%\^\&\*\(\)\-\_\+\=]{6,16}$/;
+		if (reg.test(sPwd)) {
+			oEm1.style.color = '#fff';
+			var rate = 0;
+			var regNum = /\d/;
+			var regWord = /[a-z]/;
+			var regBword = /[A-Z]/;
+			var regSymbil = /[\~\!\@\#\$\%\^\&\*\(\)\_\+\-\=]/;
+			if (regNum.test(sPwd)) {
+				rate++;
+			};
+			if (regWord.test(sPwd)) {
+				rate++;
+			};
+			if (regBword.test(sPwd)) {
+				rate++;
+			};
+			if (regSymbil.test(sPwd)) {
+				rate++;
+			};
+			switch (rate) {
+				case 1:
+					oEm1.style.color = 'red';
+					oEm1.innerHTML = '密码强度：弱';
+					break;
+				case 2:
+					oEm1.innerHTML = '密码强度：中等';
+					oEm1.style.color = 'orange';
+					break;
+				case 3:
+					oEm1.innerHTML = '密码强度：中等';
+					oEm1.style.color = 'orange';
+					break;
+				case 4:
+					oEm1.innerHTML = '密码强度：强';
+					oEm1.style.color = 'green';
+					break;
+			}
+		} else {
+			oEm1.className = 'show toRed';
+			oEm1.innerHTML = '格式错误，请重新输入'
+		}
+    }
+    
+    oRpwd.onblur = function () {
+		var sPwd = oPwd.value;
+		var sRpwd = oRpwd.value;
+		if (sPwd === sRpwd) {
+			oEm2.style.color = '#fff';
+		} else {
+			oEm2.className = 'show toRed';
+			oEm2.innerHTML = '两次输入密码不一致'
+		}
+	}
+	oBtn.onclick = function () {
+		var sUser = oUser.value;
+		var sPwd = oPwd.value;
+
+		ajaxPost("http://localhost/mi/php/register.php", `username=${sUser}&password=${sPwd}`)
+			.then(function (res) {
+				oEm3.style.opacity = "1";
+				oEm3.innerHTML = res;
+			})
+	}
+</script>
+</html>

@@ -1,0 +1,145 @@
+@charset "UTF-8";
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+dl, dt, dd, ul, ol, li,
+pre,
+form, fieldset, legend, button, input, textarea,
+th, td {
+  margin: 0;
+  padding: 0; }
+
+/** 设置默认字体 **/
+body, button, input, select, textarea {
+  font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+  font-family: Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%; }
+
+address, cite, dfn, em, var {
+  font-style: normal; }
+
+/* 将斜体扶正 */
+code, kbd, pre, samp {
+  font-family: courier new, courier, monospace; }
+
+/* 统一等宽字体 */
+small {
+  font-size: 12px; }
+
+/* 小于 12px 的中文很难阅读，让 small 正常化 */
+/** 重置列表元素 **/
+ul, ol {
+  list-style: none; }
+
+/** 重置文本格式元素 **/
+a {
+  text-decoration: none;
+  color: #000000; }
+
+a:hover {
+  text-decoration: derline; }
+
+/** 重置表单元素 **/
+legend {
+  color: #000; }
+
+/* for ie6 */
+fieldset, img {
+  border: 0; }
+
+/* img 搭车：让链接里的 img 无边框 */
+button, input, select, textarea {
+  font-size: 100%; }
+
+/* 使得表单元素在 ie 下能继承字体大小 */
+/* 注：optgroup 无法扶正 */
+/** 重置表格元素 **/
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  overflow-x: hidden; }
+
+.phoneId{
+    padding-top: 30px;
+    width: 332px;
+    /* height: 258px;; */
+}
+.phone_num{
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: normal;
+}
+.list_wrap_inside{
+    height: 74px;
+}
+.list_warp_box{
+    padding-bottom: 5px;
+    height: 42px;
+}
+.CN{
+    width: 72px;
+    height: 40px;
+    border: 1px solid #e8e8e8;
+    line-height: 42px;
+    text-align: center;
+    float: left;
+}
+.num_input{
+    float: left;
+    height: 42px;
+    width: 256px;
+}
+.num_input input{
+    float: left;
+    height: 18px;
+    width: 234px;
+    line-height: 20px;
+    padding: 10px;
+    display: block;
+}
+/* .tips{
+    float: left;
+    /* margin-bottom: 5px; */
+    /* line-height: 20px; */
+    /* font-size: 14px; */
+    /* color: #f66; */
+    /* display: none; */
+/* } */ 
+.reg_btn{
+    margin-top: 15px;
+}
+.reg_btn input{
+    height: 40px;
+    width: 330px;
+    border: none;
+    outline: none;
+    background-color: #ff6700;
+
+}
+.reg_btn:hover input{
+    opacity: 0.8;
+}
+.mima input{
+    height: 18px;
+    width: 310px;
+    line-height: 20px;
+    padding: 10px;
+    display: block;
+}
+em{
+    display: block;
+    font: normal 10px "微软雅黑";
+    margin: 10px 5px; 
+    color: #ccc;
+    opacity: 0;
+}
+.agin_mima input{
+    height: 18px;
+    width: 310px;
+    line-height: 20px;
+    padding: 10px;
+    display: block;
+}
+.toRed{color:red;}

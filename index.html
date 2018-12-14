@@ -17,8 +17,8 @@
         <div class="header_top">
             <div class="fr">
                 <div class="fl_use">
-                    <a href="#">登录</a>
-                    <a href="#">注册</a>
+                   <p> <a href="./login.html" id="username">登录</a></p>
+                    <!-- <a href="./register.html" id="zhuce">注册</a> -->
                 </div>
                 <span class="m_line"></span>
                 <div class="fl_help">
@@ -48,7 +48,7 @@
             <a href="#">
                 <div class="tab_item">预售来袭</div>
             </a>
-            <a href="#">
+            <a href="./active.html">
                 <div class="tab_item">星品驾到</div>
             </a>
             <a href="#">
@@ -78,7 +78,7 @@
         <div class="banner_nav">
             <ul class="nav_list">
                 <li class="nav_item nav1" id="nav1">
-                    <span><a href="#">有品推荐</a></span>
+                    <span><a href="./goodlist.html">有品推荐</a></span>
                 </li>
                 <li class="nav_item">
                     <span>
@@ -994,7 +994,8 @@
                 </a>
         </div>
         <div class="m_pro_list m_pro_list_fist">
-            <div class="p_goods_item">
+            <a href="./details.html">
+                <div class="p_goods_item">
                 <div class="goods_item_phone_img">
                     <div class="goods_phone_img">
                         <img src="https://img.youpin.mi-img.com/800_pic/4116c792c28ff4e4f3c10f9d7d9f076f.png?t=webp" alt="" style="height: 125px;width: 125px;margin-left: -0.5px;">
@@ -1012,7 +1013,8 @@
                             <span class="pro_flag">起</span>
                     </p>
                 </div>
-            </div>
+                </div>
+            </a>
         </div>
         <div class="m_pro_list">
                 <div class="p_goods_item">
@@ -1211,11 +1213,6 @@
 
 
 
-
-
-
-
-
 <!-- Initialize Swiper -->
 <script>
         var swiper = new Swiper('.nav_banner', {
@@ -1284,5 +1281,23 @@
     show(nav1,nav_detail);
     
 </script>
+<script>
+     function Getcookie(name) {
+		 	//alert(document.cookie)
+                var str = document.cookie;
+                var arr = str.split(';');
+                var len = arr.length;
+                for (var i = 0; i < len; i++) {
+                    var newarr = arr[i].split('=');
+                    if (newarr[0] == name) {
+                        return newarr[1];
+                    }
+                }
+            }
+            var sr = Getcookie("username");
+            console.log(sr)
+            $("#username").html("欢迎您");
+            // $("#zhuce").html("" );
 
+</script>
 </html>
